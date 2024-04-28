@@ -1,0 +1,1275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-02T17:45:00.515904" rpa="false" schemaversion="5">
+<suite id="s1" name="formuláriosEletrônicos" source="C:\Users\C5135147\OneDrive - Conduent\Documentos\MONITORIA_AUTOMACAO\Automacao\Previplan\Monitoria_Previplan_Ativo\Tests\formuláriosEletrônicos.robot">
+<test id="s1-t1" name="CT01: Acessar a tela Formulários Eletrônicos" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-04-02T17:45:01.259527" level="INFO">Opening browser 'chrome' to base url 'https://www.portal-hro.com.br/portal/site/Previplan/Login.aspx/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-02T17:45:01.259527" elapsed="6.987579"/>
+</kw>
+<kw name="Dado que acesso o portal Previplan com os usuarios &quot;ut.ativo&quot; - &quot;Conduent@1&quot;" owner="telaLoginResource" source_name="Dado que acesso o portal Previplan com os usuarios &quot;${Usuario}&quot; - &quot;${Senha}&quot;">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-02T17:45:08.250455" elapsed="0.139188"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-02T17:45:08.390647" elapsed="0.026745"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-02T17:45:08.417392" elapsed="0.306605"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:08.724720" level="INFO">Typing text 'ut.ativo' into text field '//*[@id="ContentPlaceHolder1_username"]'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${Usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:45:08.724720" elapsed="0.267655"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:08.993368" level="INFO">Typing text 'Conduent@1' into text field '//*[@id="ContentPlaceHolder1_password"]'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:45:08.992375" elapsed="0.203167"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:09.196228" level="INFO">Clicking element '//*[@id="ContentPlaceHolder1_btnEntrar"]'.</msg>
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:45:09.195542" elapsed="2.115692"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:45:08.249434" elapsed="3.062225"/>
+</kw>
+<kw name="Quando clico em Formulários Eletrônicos" owner="formuláriosEletônicosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM_ELETRON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-02T17:45:11.314198" elapsed="0.056799"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:11.373123" level="INFO">Clicking element '//*[@id="div-page-content"]/section/div[2]/div[4]/div[4]/a/div/div[2]/h7'.</msg>
+<arg>${FORM_ELETRON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:45:11.371993" elapsed="1.476849"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:45:11.313065" elapsed="1.535777"/>
+</kw>
+<kw name="Então serei direcionado para página Formulários Eletrônicos" owner="formuláriosEletônicosResource">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:12.884580" level="INFO">${URL_FormEletron_GetLocation} = https://www.portal-hro.com.br/portal/site/Previplan/Action/FormulariosEletronicosMenu.aspx</msg>
+<var>${URL_FormEletron_GetLocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-04-02T17:45:12.851172" elapsed="0.033408"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL_FormEletron_GetLocation}</arg>
+<arg>${URL_FORM_ELETRON}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-02T17:45:12.886969" elapsed="0.000160"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:13.040248" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-30.png"&gt;&lt;img src="selenium-screenshot-30.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-02T17:45:12.888133" elapsed="0.153126"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:45:12.850933" elapsed="0.190326"/>
+</kw>
+<doc>Automazação tela Formulários Eletrônicos</doc>
+<tag>Formulários Eletrônicos</tag>
+<status status="PASS" start="2024-04-02T17:45:01.256623" elapsed="11.785628"/>
+</test>
+<test id="s1-t2" name="CT02: Formulário de: Suspensão / Reativação de Contribuição Básica" line="15">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-04-02T17:45:13.045840" level="INFO">Opening browser 'chrome' to base url 'https://www.portal-hro.com.br/portal/site/Previplan/Login.aspx/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-02T17:45:13.045840" elapsed="8.925852"/>
+</kw>
+<kw name="Dado que acesso o portal Previplan com os usuarios &quot;ut.ativo&quot; - &quot;Conduent@1&quot;" owner="telaLoginResource" source_name="Dado que acesso o portal Previplan com os usuarios &quot;${Usuario}&quot; - &quot;${Senha}&quot;">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-02T17:45:21.973942" elapsed="0.129685"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-02T17:45:22.103961" elapsed="0.024029"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-02T17:45:22.128987" elapsed="0.288397"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:22.418370" level="INFO">Typing text 'ut.ativo' into text field '//*[@id="ContentPlaceHolder1_username"]'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${Usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:45:22.418370" elapsed="0.199974"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:22.618344" level="INFO">Typing text 'Conduent@1' into text field '//*[@id="ContentPlaceHolder1_password"]'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:45:22.618344" elapsed="0.161096"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:22.779440" level="INFO">Clicking element '//*[@id="ContentPlaceHolder1_btnEntrar"]'.</msg>
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:45:22.779440" elapsed="2.823496"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:45:21.972943" elapsed="3.629993"/>
+</kw>
+<kw name="Quando clico em Formulários Eletrônicos" owner="formuláriosEletônicosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM_ELETRON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-02T17:45:25.607226" elapsed="0.086389"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:25.694615" level="INFO">Clicking element '//*[@id="div-page-content"]/section/div[2]/div[4]/div[4]/a/div/div[2]/h7'.</msg>
+<arg>${FORM_ELETRON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:45:25.694615" elapsed="1.669970"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:45:25.605949" elapsed="1.758636"/>
+</kw>
+<kw name="Então serei direcionado para página Formulários Eletrônicos" owner="formuláriosEletônicosResource">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:27.384911" level="INFO">${URL_FormEletron_GetLocation} = https://www.portal-hro.com.br/portal/site/Previplan/Action/FormulariosEletronicosMenu.aspx</msg>
+<var>${URL_FormEletron_GetLocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-04-02T17:45:27.367730" elapsed="0.017181"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL_FormEletron_GetLocation}</arg>
+<arg>${URL_FORM_ELETRON}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-02T17:45:27.384911" elapsed="0.001515"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:27.571103" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-31.png"&gt;&lt;img src="selenium-screenshot-31.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-02T17:45:27.386426" elapsed="0.184836"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:45:27.366466" elapsed="0.204796"/>
+</kw>
+<kw name="Quando clico em Formulário de Suspensão / Reativação de Contribuição Básica" owner="formuláriosEletônicosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM_SUSP_REAT_CONT_BASICA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-02T17:45:27.576374" elapsed="0.054041"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:27.631415" level="INFO">Clicking element '//*[@id="div_suspender_contrib"]/div/center/a/div'.</msg>
+<arg>${FORM_SUSP_REAT_CONT_BASICA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:45:27.631415" elapsed="0.958595"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:45:27.575500" elapsed="1.014510"/>
+</kw>
+<kw name="Então serei direcionado para página do Formulário de Suspensão / Reativação de Contribuição Básica" owner="formuláriosEletônicosResource">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:28.609723" level="INFO">${URL_FormSuspReatContBasica_GetLocation} = https://www.portal-hro.com.br/portal/site/Previplan/Action/FormSuspenderContrib.aspx</msg>
+<var>${URL_FormSuspReatContBasica_GetLocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-04-02T17:45:28.592744" elapsed="0.016979"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL_FormSuspReatContBasica_GetLocation}</arg>
+<arg>${URL_FORM_SUSP_REAT_CONT_BASICA}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-02T17:45:28.610747" elapsed="0.000692"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:28.792915" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-32.png"&gt;&lt;img src="selenium-screenshot-32.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-02T17:45:28.611439" elapsed="0.181476"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:45:28.591742" elapsed="0.201702"/>
+</kw>
+<doc>Automazação tela Formulários Eletrônicos / Formulário de Suspensão / Reativação de Contribuição Básica</doc>
+<tag>Suspensão / Reativação de Contribuição Básica</tag>
+<status status="PASS" start="2024-04-02T17:45:13.044829" elapsed="15.750646"/>
+</test>
+<test id="s1-t3" name="CT03: Formulário de: Declaração para Contribuição Esporádica" line="23">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-04-02T17:45:28.801969" level="INFO">Opening browser 'chrome' to base url 'https://www.portal-hro.com.br/portal/site/Previplan/Login.aspx/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-02T17:45:28.800974" elapsed="8.847534"/>
+</kw>
+<kw name="Dado que acesso o portal Previplan com os usuarios &quot;ut.ativo&quot; - &quot;Conduent@1&quot;" owner="telaLoginResource" source_name="Dado que acesso o portal Previplan com os usuarios &quot;${Usuario}&quot; - &quot;${Senha}&quot;">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-02T17:45:37.650992" elapsed="0.129137"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-02T17:45:37.780129" elapsed="0.025972"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-02T17:45:37.806101" elapsed="0.303867"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:38.109968" level="INFO">Typing text 'ut.ativo' into text field '//*[@id="ContentPlaceHolder1_username"]'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${Usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:45:38.109968" elapsed="0.238604"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:38.349577" level="INFO">Typing text 'Conduent@1' into text field '//*[@id="ContentPlaceHolder1_password"]'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:45:38.349577" elapsed="0.165326"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:38.515903" level="INFO">Clicking element '//*[@id="ContentPlaceHolder1_btnEntrar"]'.</msg>
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:45:38.515903" elapsed="2.753302"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:45:37.649983" elapsed="3.619222"/>
+</kw>
+<kw name="Quando clico em Formulários Eletrônicos" owner="formuláriosEletônicosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM_ELETRON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-02T17:45:41.270203" elapsed="0.091757"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:41.362957" level="INFO">Clicking element '//*[@id="div-page-content"]/section/div[2]/div[4]/div[4]/a/div/div[2]/h7'.</msg>
+<arg>${FORM_ELETRON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:45:41.362957" elapsed="1.415862"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:45:41.270203" elapsed="1.508616"/>
+</kw>
+<kw name="Então serei direcionado para página Formulários Eletrônicos" owner="formuláriosEletônicosResource">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:42.802407" level="INFO">${URL_FormEletron_GetLocation} = https://www.portal-hro.com.br/portal/site/Previplan/Action/FormulariosEletronicosMenu.aspx</msg>
+<var>${URL_FormEletron_GetLocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-04-02T17:45:42.785438" elapsed="0.016969"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL_FormEletron_GetLocation}</arg>
+<arg>${URL_FORM_ELETRON}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-02T17:45:42.802407" elapsed="0.001904"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:43.032162" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-33.png"&gt;&lt;img src="selenium-screenshot-33.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-02T17:45:42.805298" elapsed="0.226864"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:45:42.784573" elapsed="0.247589"/>
+</kw>
+<kw name="Quando clico em Formulário de Suspensão / Declaração para Contribuição Esporádica" owner="formuláriosEletônicosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM_DECLARA_CONTRI_BASICA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-02T17:45:43.034632" elapsed="0.071364"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:43.107201" level="INFO">Clicking element '//*[@id="div_contrib_esporadica"]/div/center/a/div'.</msg>
+<arg>${FORM_DECLARA_CONTRI_BASICA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:45:43.106868" elapsed="1.327494"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:45:43.033628" elapsed="1.400734"/>
+</kw>
+<kw name="Então serei direcionado para página do Formulário de Suspensão / Declaração para Contribuição Esporádica" owner="formuláriosEletônicosResource">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:44.462892" level="INFO">${URL_FormDeclaraContriBasica_GetLocation} = https://www.portal-hro.com.br/portal/site/Previplan/Action/FormContribEsporadica.aspx</msg>
+<var>${URL_FormDeclaraContriBasica_GetLocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-04-02T17:45:44.434362" elapsed="0.028530"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL_FormDeclaraContriBasica_GetLocation}</arg>
+<arg>${URL_FORM_DECLARA_CONTRI_BASICA}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-02T17:45:44.462892" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:44.659743" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-34.png"&gt;&lt;img src="selenium-screenshot-34.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-02T17:45:44.462892" elapsed="0.196851"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:45:44.434362" elapsed="0.226386"/>
+</kw>
+<doc>Automazação tela Formulários Eletrônicos / Declaração para Contribuição Esporádica</doc>
+<tag>Declaração para Contribuição Esporádica</tag>
+<status status="PASS" start="2024-04-02T17:45:28.798971" elapsed="15.862771"/>
+</test>
+<test id="s1-t4" name="CT04: Formulário de: Contribuição Voluntária" line="31">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-04-02T17:45:44.666257" level="INFO">Opening browser 'chrome' to base url 'https://www.portal-hro.com.br/portal/site/Previplan/Login.aspx/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-02T17:45:44.666257" elapsed="9.913232"/>
+</kw>
+<kw name="Dado que acesso o portal Previplan com os usuarios &quot;ut.ativo&quot; - &quot;Conduent@1&quot;" owner="telaLoginResource" source_name="Dado que acesso o portal Previplan com os usuarios &quot;${Usuario}&quot; - &quot;${Senha}&quot;">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-02T17:45:54.582826" elapsed="0.129648"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-02T17:45:54.712474" elapsed="0.026848"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-02T17:45:54.740458" elapsed="0.306389"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:55.047659" level="INFO">Typing text 'ut.ativo' into text field '//*[@id="ContentPlaceHolder1_username"]'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${Usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:45:55.047259" elapsed="0.240522"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:55.288777" level="INFO">Typing text 'Conduent@1' into text field '//*[@id="ContentPlaceHolder1_password"]'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:45:55.288777" elapsed="0.192587"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:55.482365" level="INFO">Clicking element '//*[@id="ContentPlaceHolder1_btnEntrar"]'.</msg>
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:45:55.481364" elapsed="2.224077"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:45:54.581824" elapsed="3.124806"/>
+</kw>
+<kw name="Quando clico em Formulários Eletrônicos" owner="formuláriosEletônicosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM_ELETRON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-02T17:45:57.709399" elapsed="0.084200"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:57.795580" level="INFO">Clicking element '//*[@id="div-page-content"]/section/div[2]/div[4]/div[4]/a/div/div[2]/h7'.</msg>
+<arg>${FORM_ELETRON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:45:57.794596" elapsed="1.373743"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:45:57.707645" elapsed="1.461657"/>
+</kw>
+<kw name="Então serei direcionado para página Formulários Eletrônicos" owner="formuláriosEletônicosResource">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:59.194486" level="INFO">${URL_FormEletron_GetLocation} = https://www.portal-hro.com.br/portal/site/Previplan/Action/FormulariosEletronicosMenu.aspx</msg>
+<var>${URL_FormEletron_GetLocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-04-02T17:45:59.170729" elapsed="0.024759"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL_FormEletron_GetLocation}</arg>
+<arg>${URL_FORM_ELETRON}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-02T17:45:59.195488" elapsed="0.000998"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:59.397296" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-35.png"&gt;&lt;img src="selenium-screenshot-35.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-02T17:45:59.197497" elapsed="0.199799"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:45:59.170729" elapsed="0.226567"/>
+</kw>
+<kw name="Quando clico em Formulário de Suspensão / Contribuição Voluntária" owner="formuláriosEletônicosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM_CONTRI_VOLUNT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-02T17:45:59.400305" elapsed="0.048208"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:45:59.449516" level="INFO">Clicking element '//*[@id="div_contrib_voluntaria"]/div/center/a/div'.</msg>
+<arg>${FORM_CONTRI_VOLUNT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:45:59.449516" elapsed="1.375295"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:45:59.399306" elapsed="1.425505"/>
+</kw>
+<kw name="Então serei direcionado para página do Formulário de Suspensão / Contribuição Voluntária" owner="formuláriosEletônicosResource">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:00.844303" level="INFO">${URL_FormContriVolunt_GetLocation} = https://www.portal-hro.com.br/portal/site/Previplan/Action/FormContribVolunt.aspx</msg>
+<var>${URL_FormContriVolunt_GetLocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-04-02T17:46:00.829949" elapsed="0.014354"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL_FormContriVolunt_GetLocation}</arg>
+<arg>${URL_FORM_CONTRI_VOLUNT}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-02T17:46:00.845854" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:01.225317" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-36.png"&gt;&lt;img src="selenium-screenshot-36.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-02T17:46:00.846851" elapsed="0.378466"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:46:00.827946" elapsed="0.397371"/>
+</kw>
+<doc>Automazação tela Formulários Eletrônicos / Contribuição Voluntária</doc>
+<tag>Contribuição Voluntária</tag>
+<status status="PASS" start="2024-04-02T17:45:44.665260" elapsed="16.562095"/>
+</test>
+<test id="s1-t5" name="CT05: Formulário de: Requerimento Benefícios" line="39">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-04-02T17:46:01.228355" level="INFO">Opening browser 'chrome' to base url 'https://www.portal-hro.com.br/portal/site/Previplan/Login.aspx/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-02T17:46:01.228355" elapsed="8.365965"/>
+</kw>
+<kw name="Dado que acesso o portal Previplan com os usuarios &quot;ut.ativo&quot; - &quot;Conduent@1&quot;" owner="telaLoginResource" source_name="Dado que acesso o portal Previplan com os usuarios &quot;${Usuario}&quot; - &quot;${Senha}&quot;">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-02T17:46:09.597835" elapsed="0.131291"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-02T17:46:09.730125" elapsed="0.019613"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-02T17:46:09.749738" elapsed="0.313057"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:10.063797" level="INFO">Typing text 'ut.ativo' into text field '//*[@id="ContentPlaceHolder1_username"]'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${Usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:46:10.062795" elapsed="0.165750"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:10.229549" level="INFO">Typing text 'Conduent@1' into text field '//*[@id="ContentPlaceHolder1_password"]'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:46:10.229549" elapsed="0.212255"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:10.442747" level="INFO">Clicking element '//*[@id="ContentPlaceHolder1_btnEntrar"]'.</msg>
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:46:10.442432" elapsed="2.549810"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:46:09.596039" elapsed="3.397213"/>
+</kw>
+<kw name="Quando clico em Formulários Eletrônicos" owner="formuláriosEletônicosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM_ELETRON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-02T17:46:12.997651" elapsed="0.058015"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:13.055666" level="INFO">Clicking element '//*[@id="div-page-content"]/section/div[2]/div[4]/div[4]/a/div/div[2]/h7'.</msg>
+<arg>${FORM_ELETRON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:46:13.055666" elapsed="1.726746"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:46:12.996650" elapsed="1.785762"/>
+</kw>
+<kw name="Então serei direcionado para página Formulários Eletrônicos" owner="formuláriosEletônicosResource">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:14.799473" level="INFO">${URL_FormEletron_GetLocation} = https://www.portal-hro.com.br/portal/site/Previplan/Action/FormulariosEletronicosMenu.aspx</msg>
+<var>${URL_FormEletron_GetLocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-04-02T17:46:14.785334" elapsed="0.014139"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL_FormEletron_GetLocation}</arg>
+<arg>${URL_FORM_ELETRON}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-02T17:46:14.799473" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:14.961754" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-37.png"&gt;&lt;img src="selenium-screenshot-37.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-02T17:46:14.799473" elapsed="0.162813"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:46:14.784335" elapsed="0.178148"/>
+</kw>
+<kw name="Quando clico em Formulário de Suspensão / Requerimento Benefícios" owner="formuláriosEletônicosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM_REQUERI_BENEF}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-02T17:46:14.964383" elapsed="0.053050"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:15.018433" level="INFO">Clicking element '//*[@id="div_req_benef"]/div/center/a/div'.</msg>
+<arg>${FORM_REQUERI_BENEF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:46:15.017433" elapsed="3.908649"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:46:14.963360" elapsed="3.963720"/>
+</kw>
+<kw name="Então serei direcionado para página do Formulário de Suspensão / Requerimento Benefícios" owner="formuláriosEletônicosResource">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:18.946517" level="INFO">${URL_FormRequeBenef_GetLocation} = https://www.portal-hro.com.br/portal/site/Previplan/Action/FichaReqBeneficios-PDF.aspx</msg>
+<var>${URL_FormRequeBenef_GetLocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-04-02T17:46:18.931080" elapsed="0.015437"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL_FormRequeBenef_GetLocation}</arg>
+<arg>${URL_FORM_REQUERI_BENEF}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-02T17:46:18.947509" elapsed="0.001368"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:19.203709" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-38.png"&gt;&lt;img src="selenium-screenshot-38.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-02T17:46:18.948877" elapsed="0.254832"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:46:18.929084" elapsed="0.275629"/>
+</kw>
+<doc>Automazação tela Formulários Eletrônicos / Requerimento Benefícios</doc>
+<tag>Requerimento Benefícios</tag>
+<status status="PASS" start="2024-04-02T17:46:01.228355" elapsed="17.977356"/>
+</test>
+<test id="s1-t6" name="CT06: Formulário de: Declaração de Participante Vinculado" line="47">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-04-02T17:46:19.212418" level="INFO">Opening browser 'chrome' to base url 'https://www.portal-hro.com.br/portal/site/Previplan/Login.aspx/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-02T17:46:19.211407" elapsed="8.973712"/>
+</kw>
+<kw name="Dado que acesso o portal Previplan com os usuarios &quot;ut.ativo&quot; - &quot;Conduent@1&quot;" owner="telaLoginResource" source_name="Dado que acesso o portal Previplan com os usuarios &quot;${Usuario}&quot; - &quot;${Senha}&quot;">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-02T17:46:28.188115" elapsed="0.126152"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-02T17:46:28.314267" elapsed="0.018897"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-02T17:46:28.333164" elapsed="0.300056"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:28.634839" level="INFO">Typing text 'ut.ativo' into text field '//*[@id="ContentPlaceHolder1_username"]'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${Usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:46:28.634220" elapsed="0.214378"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:28.849595" level="INFO">Typing text 'Conduent@1' into text field '//*[@id="ContentPlaceHolder1_password"]'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:46:28.848598" elapsed="0.170836"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:29.020467" level="INFO">Clicking element '//*[@id="ContentPlaceHolder1_btnEntrar"]'.</msg>
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:46:29.020467" elapsed="2.471703"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:46:28.188115" elapsed="3.304210"/>
+</kw>
+<kw name="Quando clico em Formulários Eletrônicos" owner="formuláriosEletônicosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM_ELETRON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-02T17:46:31.494331" elapsed="0.089353"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:31.584789" level="INFO">Clicking element '//*[@id="div-page-content"]/section/div[2]/div[4]/div[4]/a/div/div[2]/h7'.</msg>
+<arg>${FORM_ELETRON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:46:31.583684" elapsed="1.522499"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:46:31.493999" elapsed="1.613192"/>
+</kw>
+<kw name="Então serei direcionado para página Formulários Eletrônicos" owner="formuláriosEletônicosResource">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:33.147255" level="INFO">${URL_FormEletron_GetLocation} = https://www.portal-hro.com.br/portal/site/Previplan/Action/FormulariosEletronicosMenu.aspx</msg>
+<var>${URL_FormEletron_GetLocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-04-02T17:46:33.108010" elapsed="0.039245"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL_FormEletron_GetLocation}</arg>
+<arg>${URL_FORM_ELETRON}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-02T17:46:33.147255" elapsed="0.001165"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:33.294553" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-39.png"&gt;&lt;img src="selenium-screenshot-39.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-02T17:46:33.148420" elapsed="0.146833"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:46:33.108010" elapsed="0.187243"/>
+</kw>
+<kw name="Quando clico em Formulário de Suspensão / Declaração de Participante Vinculado" owner="formuláriosEletônicosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM_DECLARA_PART_VINCULADO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-02T17:46:33.299242" elapsed="0.054048"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:33.354295" level="INFO">Clicking element '//*[@id="div_vinculado"]/div/center/a/div'.</msg>
+<arg>${FORM_DECLARA_PART_VINCULADO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:46:33.354295" elapsed="2.344681"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:46:33.298254" elapsed="2.400722"/>
+</kw>
+<kw name="Então serei direcionado para página do Formulário de Suspensão / Declaração de Participante Vinculado" owner="formuláriosEletônicosResource">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:35.718106" level="INFO">${URL_FormDeclaraPartVinculado_GetLocation} = https://www.portal-hro.com.br/portal/site/Previplan/Action/Forms/DeclaracaoParticipanteVinculado.aspx</msg>
+<var>${URL_FormDeclaraPartVinculado_GetLocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-04-02T17:46:35.701273" elapsed="0.016833"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL_FormDeclaraPartVinculado_GetLocation}</arg>
+<arg>${URL_FORM_DECLARA_PART_VINCULADO}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-02T17:46:35.718106" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:35.889364" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-40.png"&gt;&lt;img src="selenium-screenshot-40.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-02T17:46:35.718106" elapsed="0.172258"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:46:35.699980" elapsed="0.190384"/>
+</kw>
+<doc>Automazação tela Formulários Eletrônicos / Declaração de Participante Vinculado</doc>
+<tag>Declaração de Participante Vinculado</tag>
+<status status="PASS" start="2024-04-02T17:46:19.205711" elapsed="16.686196"/>
+</test>
+<test id="s1-t7" name="CT07: Formulário de: Termo de Portabilidade" line="55">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-04-02T17:46:35.897100" level="INFO">Opening browser 'chrome' to base url 'https://www.portal-hro.com.br/portal/site/Previplan/Login.aspx/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-02T17:46:35.897100" elapsed="8.723801"/>
+</kw>
+<kw name="Dado que acesso o portal Previplan com os usuarios &quot;ut.ativo&quot; - &quot;Conduent@1&quot;" owner="telaLoginResource" source_name="Dado que acesso o portal Previplan com os usuarios &quot;${Usuario}&quot; - &quot;${Senha}&quot;">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-02T17:46:44.622895" elapsed="0.125432"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-02T17:46:44.748327" elapsed="0.018837"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-02T17:46:44.768161" elapsed="0.292651"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:45.060812" level="INFO">Typing text 'ut.ativo' into text field '//*[@id="ContentPlaceHolder1_username"]'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${Usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:46:45.060812" elapsed="0.198913"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:45.260731" level="INFO">Typing text 'Conduent@1' into text field '//*[@id="ContentPlaceHolder1_password"]'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:46:45.260731" elapsed="0.162189"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:45.423921" level="INFO">Clicking element '//*[@id="ContentPlaceHolder1_btnEntrar"]'.</msg>
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:46:45.422920" elapsed="1.984054"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:46:44.621895" elapsed="2.785628"/>
+</kw>
+<kw name="Quando clico em Formulários Eletrônicos" owner="formuláriosEletônicosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM_ELETRON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-02T17:46:47.409680" elapsed="0.049485"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:47.459165" level="INFO">Clicking element '//*[@id="div-page-content"]/section/div[2]/div[4]/div[4]/a/div/div[2]/h7'.</msg>
+<arg>${FORM_ELETRON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:46:47.459165" elapsed="1.374795"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:46:47.408697" elapsed="1.425263"/>
+</kw>
+<kw name="Então serei direcionado para página Formulários Eletrônicos" owner="formuláriosEletônicosResource">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:48.854346" level="INFO">${URL_FormEletron_GetLocation} = https://www.portal-hro.com.br/portal/site/Previplan/Action/FormulariosEletronicosMenu.aspx</msg>
+<var>${URL_FormEletron_GetLocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-04-02T17:46:48.836490" elapsed="0.018881"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL_FormEletron_GetLocation}</arg>
+<arg>${URL_FORM_ELETRON}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-02T17:46:48.855371" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:49.048630" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-41.png"&gt;&lt;img src="selenium-screenshot-41.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-02T17:46:48.855371" elapsed="0.193259"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:46:48.836490" elapsed="0.212641"/>
+</kw>
+<kw name="Quando clico em Formulário de Suspensão / Termo de Portabilidade" owner="formuláriosEletônicosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM_TERMO_PORTAB}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-02T17:46:49.050683" elapsed="0.055639"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:49.106322" level="INFO">Clicking element '//*[@id="div_termo_portabilidade"]/div/center/a/div'.</msg>
+<arg>${FORM_TERMO_PORTAB}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:46:49.106322" elapsed="0.970503"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:46:49.050136" elapsed="1.026689"/>
+</kw>
+<kw name="Então serei direcionado para página do Formulário de Suspensão / Termo de Portabilidade" owner="formuláriosEletônicosResource">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:50.100935" level="INFO">${URL_FormTermoPortab_GetLocation} = https://www.portal-hro.com.br/portal/site/Previplan/Action/Forms/FormTermoPortabilidade.aspx</msg>
+<var>${URL_FormTermoPortab_GetLocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-04-02T17:46:50.079568" elapsed="0.021367"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL_FormTermoPortab_GetLocation}</arg>
+<arg>${URL_FORM_TERMO_PORTAB}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-02T17:46:50.100935" elapsed="0.001008"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:50.249450" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-42.png"&gt;&lt;img src="selenium-screenshot-42.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-02T17:46:50.101943" elapsed="0.147507"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:46:50.077847" elapsed="0.171603"/>
+</kw>
+<doc>Automazação tela Formulários Eletrônicos / Termo de Portabilidade</doc>
+<tag>Termo de Portabilidade</tag>
+<status status="PASS" start="2024-04-02T17:46:35.895093" elapsed="14.360613"/>
+</test>
+<test id="s1-t8" name="CT08: Formulário de: Requerimento de Unificação de Matrículas" line="63">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-04-02T17:46:50.257717" level="INFO">Opening browser 'chrome' to base url 'https://www.portal-hro.com.br/portal/site/Previplan/Login.aspx/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-02T17:46:50.257717" elapsed="7.632609"/>
+</kw>
+<kw name="Dado que acesso o portal Previplan com os usuarios &quot;ut.ativo&quot; - &quot;Conduent@1&quot;" owner="telaLoginResource" source_name="Dado que acesso o portal Previplan com os usuarios &quot;${Usuario}&quot; - &quot;${Senha}&quot;">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-02T17:46:57.892710" elapsed="0.136003"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-02T17:46:58.029808" elapsed="0.023486"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-02T17:46:58.054296" elapsed="0.311504"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:58.366798" level="INFO">Typing text 'ut.ativo' into text field '//*[@id="ContentPlaceHolder1_username"]'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${Usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:46:58.365800" elapsed="0.183581"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:58.550385" level="INFO">Typing text 'Conduent@1' into text field '//*[@id="ContentPlaceHolder1_password"]'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:46:58.549381" elapsed="0.146589"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:46:58.696975" level="INFO">Clicking element '//*[@id="ContentPlaceHolder1_btnEntrar"]'.</msg>
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:46:58.696975" elapsed="2.693293"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:46:57.892144" elapsed="3.498124"/>
+</kw>
+<kw name="Quando clico em Formulários Eletrônicos" owner="formuláriosEletônicosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM_ELETRON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-02T17:47:01.392413" elapsed="0.062373"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:01.455789" level="INFO">Clicking element '//*[@id="div-page-content"]/section/div[2]/div[4]/div[4]/a/div/div[2]/h7'.</msg>
+<arg>${FORM_ELETRON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:47:01.454786" elapsed="1.816831"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:47:01.391827" elapsed="1.880681"/>
+</kw>
+<kw name="Então serei direcionado para página Formulários Eletrônicos" owner="formuláriosEletônicosResource">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:03.304660" level="INFO">${URL_FormEletron_GetLocation} = https://www.portal-hro.com.br/portal/site/Previplan/Action/FormulariosEletronicosMenu.aspx</msg>
+<var>${URL_FormEletron_GetLocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-04-02T17:47:03.276681" elapsed="0.027979"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL_FormEletron_GetLocation}</arg>
+<arg>${URL_FORM_ELETRON}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-02T17:47:03.305662" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:03.479390" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-43.png"&gt;&lt;img src="selenium-screenshot-43.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-02T17:47:03.305662" elapsed="0.178194"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:47:03.275622" elapsed="0.208234"/>
+</kw>
+<kw name="Quando clico em Formulário de Suspensão / Requerimento de Unificação de Matrículas" owner="formuláriosEletônicosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM_REQUE_UNIF_MATRI}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-02T17:47:03.486123" elapsed="0.055472"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:03.541595" level="INFO">Clicking element '//*[@id="div_unificacao_matriculas"]/div/center/a/div'.</msg>
+<arg>${FORM_REQUE_UNIF_MATRI}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:47:03.541595" elapsed="0.886550"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:47:03.485113" elapsed="0.943032"/>
+</kw>
+<kw name="Então serei direcionado para página do Formulário de Suspensão / Requerimento de Unificação de Matrículas" owner="formuláriosEletônicosResource">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:04.462718" level="INFO">${URL_FormRequeUnifMatri_GetLocation} = https://www.portal-hro.com.br/portal/site/Previplan/Action/Forms/FormUnificacaoMatricula.aspx</msg>
+<var>${URL_FormRequeUnifMatri_GetLocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-04-02T17:47:04.431153" elapsed="0.031565"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL_FormRequeUnifMatri_GetLocation}</arg>
+<arg>${URL_FORM_REQUE_UNIF_MATRI}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-02T17:47:04.463724" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:04.608667" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-44.png"&gt;&lt;img src="selenium-screenshot-44.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-02T17:47:04.464730" elapsed="0.143937"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:47:04.429150" elapsed="0.179517"/>
+</kw>
+<doc>Automazação tela Formulários Eletrônicos / Requerimento de Unificação de Matrículas</doc>
+<tag>Requerimento de Unificação de Matrículas</tag>
+<status status="PASS" start="2024-04-02T17:46:50.257717" elapsed="14.352335"/>
+</test>
+<test id="s1-t9" name="CT09: Formulário de: Quitação/Amortização de Empréstimo Previplan" line="71">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-04-02T17:47:04.615222" level="INFO">Opening browser 'chrome' to base url 'https://www.portal-hro.com.br/portal/site/Previplan/Login.aspx/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-02T17:47:04.615222" elapsed="3.156407"/>
+</kw>
+<kw name="Dado que acesso o portal Previplan com os usuarios &quot;ut.ativo&quot; - &quot;Conduent@1&quot;" owner="telaLoginResource" source_name="Dado que acesso o portal Previplan com os usuarios &quot;${Usuario}&quot; - &quot;${Senha}&quot;">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-02T17:47:07.773635" elapsed="5.448430"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-02T17:47:13.223077" elapsed="0.016603"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-02T17:47:13.239680" elapsed="0.284686"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:13.525366" level="INFO">Typing text 'ut.ativo' into text field '//*[@id="ContentPlaceHolder1_username"]'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${Usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:47:13.524366" elapsed="0.131640"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:13.657066" level="INFO">Typing text 'Conduent@1' into text field '//*[@id="ContentPlaceHolder1_password"]'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:47:13.656006" elapsed="0.134612"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:13.790618" level="INFO">Clicking element '//*[@id="ContentPlaceHolder1_btnEntrar"]'.</msg>
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:47:13.790618" elapsed="1.962093"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:47:07.772637" elapsed="7.980074"/>
+</kw>
+<kw name="Quando clico em Formulários Eletrônicos" owner="formuláriosEletônicosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM_ELETRON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-02T17:47:15.755312" elapsed="0.051951"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:15.808277" level="INFO">Clicking element '//*[@id="div-page-content"]/section/div[2]/div[4]/div[4]/a/div/div[2]/h7'.</msg>
+<arg>${FORM_ELETRON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:47:15.807263" elapsed="1.388465"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:47:15.754278" elapsed="1.441450"/>
+</kw>
+<kw name="Então serei direcionado para página Formulários Eletrônicos" owner="formuláriosEletônicosResource">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:17.222064" level="INFO">${URL_FormEletron_GetLocation} = https://www.portal-hro.com.br/portal/site/Previplan/Action/FormulariosEletronicosMenu.aspx</msg>
+<var>${URL_FormEletron_GetLocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-04-02T17:47:17.199514" elapsed="0.022550"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL_FormEletron_GetLocation}</arg>
+<arg>${URL_FORM_ELETRON}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-02T17:47:17.222064" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:17.392305" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-45.png"&gt;&lt;img src="selenium-screenshot-45.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-02T17:47:17.222064" elapsed="0.171247"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:47:17.197725" elapsed="0.195586"/>
+</kw>
+<kw name="Quando clico em Formulário de Suspensão / Quitação/Amortização de Empréstimo Previplan" owner="formuláriosEletônicosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM_QUITA_AMORT_EMPREST_PREVIPLAN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-02T17:47:17.395018" elapsed="0.046489"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:17.443516" level="INFO">Clicking element '//*[@id="div_amortizacao"]/div/center/a/div'.</msg>
+<arg>${FORM_QUITA_AMORT_EMPREST_PREVIPLAN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:47:17.442519" elapsed="2.013503"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:47:17.395018" elapsed="2.061507"/>
+</kw>
+<kw name="Então serei direcionado para página do Formulário de Suspensão / Quitação/Amortização de Empréstimo Previplan" owner="formuláriosEletônicosResource">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:19.472835" level="INFO">${URL_FormQuitaAmortEmprestPreviplan_GetLocation} = https://forms.office.com/pages/responsepage.aspx?id=X_1W0GMvzEm0faDWceye0niBP_AtKP5OgSev-LMcGvdUOElMT1RNRkgyOUFNUU5ZTEpFUTZNSEpJTy4u</msg>
+<var>${URL_FormQuitaAmortEmprestPreviplan_GetLocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-04-02T17:47:19.458532" elapsed="0.014303"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL_FormQuitaAmortEmprestPreviplan_GetLocation}</arg>
+<arg>${URL_FORM_QUITA_AMORT_EMPREST_PREVIPLAN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-02T17:47:19.473835" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:19.625510" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-46.png"&gt;&lt;img src="selenium-screenshot-46.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-02T17:47:19.473835" elapsed="0.152671"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:47:19.457538" elapsed="0.168968"/>
+</kw>
+<doc>Automazação tela Formulários Eletrônicos / Formulário de Quitação/Amortização de Empréstimo Previplan</doc>
+<tag>Quitação/Amortização de Empréstimo Previplan</tag>
+<status status="PASS" start="2024-04-02T17:47:04.612658" elapsed="15.013848"/>
+</test>
+<test id="s1-t10" name="CT10: Formulário de: Opção Regime de Tributação" line="79">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-04-02T17:47:19.630508" level="INFO">Opening browser 'chrome' to base url 'https://www.portal-hro.com.br/portal/site/Previplan/Login.aspx/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-02T17:47:19.630508" elapsed="8.211476"/>
+</kw>
+<kw name="Dado que acesso o portal Previplan com os usuarios &quot;ut.ativo&quot; - &quot;Conduent@1&quot;" owner="telaLoginResource" source_name="Dado que acesso o portal Previplan com os usuarios &quot;${Usuario}&quot; - &quot;${Senha}&quot;">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-02T17:47:27.843086" elapsed="0.127658"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-02T17:47:27.970744" elapsed="0.020015"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-02T17:47:27.990759" elapsed="0.330343"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:28.321102" level="INFO">Typing text 'ut.ativo' into text field '//*[@id="ContentPlaceHolder1_username"]'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${Usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:47:28.321102" elapsed="0.271573"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:28.593389" level="INFO">Typing text 'Conduent@1' into text field '//*[@id="ContentPlaceHolder1_password"]'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:47:28.592675" elapsed="0.235266"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:28.828941" level="INFO">Clicking element '//*[@id="ContentPlaceHolder1_btnEntrar"]'.</msg>
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:47:28.828941" elapsed="2.669448"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:47:27.843086" elapsed="3.655303"/>
+</kw>
+<kw name="Quando clico em Formulários Eletrônicos" owner="formuláriosEletônicosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM_ELETRON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-02T17:47:31.502383" elapsed="0.066217"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:31.569602" level="INFO">Clicking element '//*[@id="div-page-content"]/section/div[2]/div[4]/div[4]/a/div/div[2]/h7'.</msg>
+<arg>${FORM_ELETRON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:47:31.568600" elapsed="1.664835"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:47:31.500380" elapsed="1.733604"/>
+</kw>
+<kw name="Então serei direcionado para página Formulários Eletrônicos" owner="formuláriosEletônicosResource">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:33.246257" level="INFO">${URL_FormEletron_GetLocation} = https://www.portal-hro.com.br/portal/site/Previplan/Action/FormulariosEletronicosMenu.aspx</msg>
+<var>${URL_FormEletron_GetLocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-04-02T17:47:33.235979" elapsed="0.010278"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL_FormEletron_GetLocation}</arg>
+<arg>${URL_FORM_ELETRON}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-02T17:47:33.246257" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:33.395953" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-47.png"&gt;&lt;img src="selenium-screenshot-47.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-02T17:47:33.246257" elapsed="0.149696"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:47:33.234988" elapsed="0.160965"/>
+</kw>
+<kw name="Quando clico em Formulário de Suspensão / Opção Regime de Tributação" owner="formuláriosEletônicosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM_OPCAO_REGIME_TRIBUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-02T17:47:33.403179" elapsed="0.045661"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:33.450829" level="INFO">Clicking element '//*[@id="div_opcao_regime_trib"]/div/center/a/div'.</msg>
+<arg>${FORM_OPCAO_REGIME_TRIBUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:47:33.450011" elapsed="0.181654"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-02T17:47:43.632564" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-02T17:47:33.632108" elapsed="10.000456"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:43.923043" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-48.png"&gt;&lt;img src="selenium-screenshot-48.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-02T17:47:43.633389" elapsed="0.289654"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:47:33.403179" elapsed="10.519864"/>
+</kw>
+<doc>Automazação tela Formulários Eletrônicos / Formulário Opção Regime de Tributação</doc>
+<tag>Opção Regime de Tributação</tag>
+<status status="PASS" start="2024-04-02T17:47:19.628509" elapsed="24.298039"/>
+</test>
+<test id="s1-t11" name="CT11: Formulário de: Retratação da Opção pelo Regime de Tributação" line="87">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-04-02T17:47:43.930028" level="INFO">Opening browser 'chrome' to base url 'https://www.portal-hro.com.br/portal/site/Previplan/Login.aspx/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-02T17:47:43.930028" elapsed="8.426561"/>
+</kw>
+<kw name="Dado que acesso o portal Previplan com os usuarios &quot;ut.ativo&quot; - &quot;Conduent@1&quot;" owner="telaLoginResource" source_name="Dado que acesso o portal Previplan com os usuarios &quot;${Usuario}&quot; - &quot;${Senha}&quot;">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-02T17:47:52.360662" elapsed="0.129497"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-02T17:47:52.491170" elapsed="0.020741"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-02T17:47:52.512118" elapsed="0.292955"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:52.806075" level="INFO">Typing text 'ut.ativo' into text field '//*[@id="ContentPlaceHolder1_username"]'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${Usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:47:52.805073" elapsed="0.180153"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:52.986219" level="INFO">Typing text 'Conduent@1' into text field '//*[@id="ContentPlaceHolder1_password"]'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:47:52.985465" elapsed="0.169074"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:53.154723" level="INFO">Clicking element '//*[@id="ContentPlaceHolder1_btnEntrar"]'.</msg>
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:47:53.154723" elapsed="2.061464"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:47:52.359590" elapsed="2.856597"/>
+</kw>
+<kw name="Quando clico em Formulários Eletrônicos" owner="formuláriosEletônicosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM_ELETRON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-02T17:47:55.219060" elapsed="0.058927"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:55.278979" level="INFO">Clicking element '//*[@id="div-page-content"]/section/div[2]/div[4]/div[4]/a/div/div[2]/h7'.</msg>
+<arg>${FORM_ELETRON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:47:55.278979" elapsed="1.351956"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:47:55.218057" elapsed="1.412878"/>
+</kw>
+<kw name="Então serei direcionado para página Formulários Eletrônicos" owner="formuláriosEletônicosResource">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:56.649809" level="INFO">${URL_FormEletron_GetLocation} = https://www.portal-hro.com.br/portal/site/Previplan/Action/FormulariosEletronicosMenu.aspx</msg>
+<var>${URL_FormEletron_GetLocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-04-02T17:47:56.633130" elapsed="0.016679"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL_FormEletron_GetLocation}</arg>
+<arg>${URL_FORM_ELETRON}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-02T17:47:56.649809" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:56.819080" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-49.png"&gt;&lt;img src="selenium-screenshot-49.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-02T17:47:56.649809" elapsed="0.170277"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:47:56.631961" elapsed="0.188125"/>
+</kw>
+<kw name="Quando clico em Formulário de Suspensão / Retratação da Opção pelo Regime de Tributação" owner="formuláriosEletônicosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM_RETRA_OPCAO_REGIME_TRIBUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-02T17:47:56.824072" elapsed="0.051812"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:47:56.876216" level="INFO">Clicking element '//*[@id="div_retratacao_regime_trib"]/div/center/a/div'.</msg>
+<arg>${FORM_RETRA_OPCAO_REGIME_TRIBUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-02T17:47:56.876216" elapsed="0.165256"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-02T17:48:07.043275" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-02T17:47:57.042470" elapsed="10.000805"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-02T17:48:07.294138" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-50.png"&gt;&lt;img src="selenium-screenshot-50.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-02T17:48:07.043275" elapsed="0.250863"/>
+</kw>
+<status status="PASS" start="2024-04-02T17:47:56.823072" elapsed="10.472066"/>
+</kw>
+<doc>Automazação tela Formulários Eletrônicos / Formulário Retratação da Opção pelo Regime de Tributação</doc>
+<tag>Retratação da Opção pelo Regime de Tributação</tag>
+<status status="PASS" start="2024-04-02T17:47:43.929015" elapsed="23.367130"/>
+</test>
+<status status="PASS" start="2024-04-02T17:45:00.523774" elapsed="186.775478"/>
+</suite>
+<statistics>
+<total>
+<stat pass="11" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Contribuição Voluntária</stat>
+<stat pass="1" fail="0" skip="0">Declaração de Participante Vinculado</stat>
+<stat pass="1" fail="0" skip="0">Declaração para Contribuição Esporádica</stat>
+<stat pass="1" fail="0" skip="0">Formulários Eletrônicos</stat>
+<stat pass="1" fail="0" skip="0">Opção Regime de Tributação</stat>
+<stat pass="1" fail="0" skip="0">Quitação/Amortização de Empréstimo Previplan</stat>
+<stat pass="1" fail="0" skip="0">Requerimento Benefícios</stat>
+<stat pass="1" fail="0" skip="0">Requerimento de Unificação de Matrículas</stat>
+<stat pass="1" fail="0" skip="0">Retratação da Opção pelo Regime de Tributação</stat>
+<stat pass="1" fail="0" skip="0">Suspensão / Reativação de Contribuição Básica</stat>
+<stat pass="1" fail="0" skip="0">Termo de Portabilidade</stat>
+</tag>
+<suite>
+<stat pass="11" fail="0" skip="0" id="s1" name="formuláriosEletrônicos">formuláriosEletrônicos</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
